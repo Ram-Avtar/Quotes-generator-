@@ -1,0 +1,26 @@
+{% extends "quote/base.html"%}
+{% block content %}
+	<h1 align="center">this is a quotes home page</h1>
+	<article class="media content-section">
+		<div class="media-body">
+			<div class="article-metadata mr-2">
+				{{Quotes.objects.values(auther)}}
+			</div>
+			<h3 class="article-title">
+				{{Quotes.objects.values(sn)}}
+			</h3>
+			<p class="article-content">
+				{{Quotes.objects.values(content)}}
+			</p>
+			
+		</div>
+	</article>
+		
+	
+		<!-- {% for qu in post %}
+		<h2>{{ qu.sn}}</h2>
+		<p> {{qu.content}}</p>
+		<p> by {{qu.auther}}</p>
+	{% endfor %} -->
+
+{% endblock content %}
